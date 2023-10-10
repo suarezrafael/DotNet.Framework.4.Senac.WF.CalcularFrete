@@ -30,14 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTotalFrete = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtUf = new System.Windows.Forms.TextBox();
             this.txtFreteMinimo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCalcularFrete = new System.Windows.Forms.Button();
-            this.txtTotalFrete = new System.Windows.Forms.TextBox();
+            this.cbxUF = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -66,6 +66,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DADOS DO FRETE";
             // 
+            // txtTotalFrete
+            // 
+            this.txtTotalFrete.Location = new System.Drawing.Point(183, 65);
+            this.txtTotalFrete.Name = "txtTotalFrete";
+            this.txtTotalFrete.Size = new System.Drawing.Size(184, 34);
+            this.txtTotalFrete.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -77,7 +84,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtUf);
+            this.groupBox2.Controls.Add(this.cbxUF);
             this.groupBox2.Controls.Add(this.txtFreteMinimo);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -88,13 +95,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DADOS DO PACOTE";
-            // 
-            // txtUf
-            // 
-            this.txtUf.Location = new System.Drawing.Point(183, 95);
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(184, 34);
-            this.txtUf.TabIndex = 4;
             // 
             // txtFreteMinimo
             // 
@@ -131,12 +131,18 @@
             this.btnCalcularFrete.UseVisualStyleBackColor = true;
             this.btnCalcularFrete.Click += new System.EventHandler(this.btnCalcularFrete_Click);
             // 
-            // txtTotalFrete
+            // cbxUF
             // 
-            this.txtTotalFrete.Location = new System.Drawing.Point(183, 65);
-            this.txtTotalFrete.Name = "txtTotalFrete";
-            this.txtTotalFrete.Size = new System.Drawing.Size(184, 34);
-            this.txtTotalFrete.TabIndex = 1;
+            this.cbxUF.FormattingEnabled = true;
+            this.cbxUF.Items.AddRange(new object[] {
+            "RS",
+            "SC",
+            "PR",
+            "SP"});
+            this.cbxUF.Location = new System.Drawing.Point(183, 95);
+            this.cbxUF.Name = "cbxUF";
+            this.cbxUF.Size = new System.Drawing.Size(184, 37);
+            this.cbxUF.TabIndex = 5;
             // 
             // Form1
             // 
@@ -163,10 +169,10 @@
         private System.Windows.Forms.Button btnCalcularFrete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUf;
         private System.Windows.Forms.TextBox txtFreteMinimo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotalFrete;
+        private System.Windows.Forms.ComboBox cbxUF;
     }
 }
 
